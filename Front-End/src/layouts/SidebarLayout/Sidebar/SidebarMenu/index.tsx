@@ -31,6 +31,7 @@ import ChromeReaderModeTwoToneIcon from '@mui/icons-material/ChromeReaderModeTwo
 import WorkspacePremiumTwoToneIcon from '@mui/icons-material/WorkspacePremiumTwoTone';
 import CameraFrontTwoToneIcon from '@mui/icons-material/CameraFrontTwoTone';
 import DisplaySettingsTwoToneIcon from '@mui/icons-material/DisplaySettingsTwoTone';
+import { Add, AddTask, FormatListBulleted, Group, PersonAddAlt, PersonAddAlt1, Tune } from '@mui/icons-material';
 
 const MenuWrapper = styled(Box)(
   ({ theme }) => `
@@ -197,6 +198,127 @@ function SidebarMenu() {
             </List>
           </SubMenuWrapper>
         </List>
+        
+        
+        <List
+          component="div"
+          subheader={
+            <ListSubheader component="div" disableSticky>
+              Cargos
+            </ListSubheader>
+          }
+        >
+          <SubMenuWrapper>
+            <List component="div">
+              
+              <ListItem component="div">
+                <Button
+                  disableRipple
+                  component={RouterLink}
+                  onClick={closeSidebar}
+                  to="/groups"
+                  startIcon={<Tune />}
+                >
+                  Gerenciar
+                </Button>
+              </ListItem>
+
+              <ListItem component="div">
+                <Button
+                  disableRipple
+                  component={RouterLink}
+                  onClick={closeSidebar}
+                  to="/groups-add"
+                  startIcon={<Add />}
+                >
+                  Adicionar
+                </Button>
+              </ListItem>
+            </List>
+          </SubMenuWrapper>
+        </List>
+
+        <List
+          component="div"
+          subheader={
+            <ListSubheader component="div" disableSticky>
+              Funcionarios
+            </ListSubheader>
+          }
+        >
+          <SubMenuWrapper>
+            <List component="div">
+              
+              <ListItem component="div">
+                <Button
+                  disableRipple
+                  component={RouterLink}
+                  onClick={closeSidebar}
+                  to="/employees"
+                  startIcon={<Group />}
+                >
+                  Gerenciar
+                </Button>
+              </ListItem>
+
+              <ListItem component="div">
+                <Button
+                  disableRipple
+                  component={RouterLink}
+                  onClick={closeSidebar}
+                  to="/employees-add"
+                  startIcon={<PersonAddAlt1 />}
+                >
+                  Adicionar
+                </Button>
+              </ListItem>
+              
+            </List>
+          </SubMenuWrapper>
+        </List>
+        
+        
+        <List
+          component="div"
+          subheader={
+            <ListSubheader component="div" disableSticky>
+              Tarefas
+            </ListSubheader>
+          }
+        >
+          <SubMenuWrapper>
+            <List component="div">
+              
+              <ListItem component="div">
+                <Button
+                  disableRipple
+                  component={RouterLink}
+                  onClick={closeSidebar}
+                  to="/tasks"
+                  startIcon={<FormatListBulleted />}
+                >
+                  Gerenciar
+                </Button>
+              </ListItem>
+
+              <ListItem component="div">
+                <Button
+                  disableRipple
+                  component={RouterLink}
+                  onClick={closeSidebar}
+                  to="/tasks-add"
+                  startIcon={<AddTask />}
+                >
+                  Adicionar
+                </Button>
+              </ListItem>
+
+
+            </List>
+          </SubMenuWrapper>
+        </List>
+        
+        
         <List
           component="div"
           subheader={
